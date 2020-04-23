@@ -45,7 +45,7 @@ make -j4
 make install
 ```
 
-## OS X
+## macOS
 
 To build this plugin on macOS the following software needs to be installed on the system:
 
@@ -64,7 +64,7 @@ brew pin qt
 ### Build OBS and necessary obs-libraries
 
 ```
-wget --quiet --retry-connrefused --waitretry=1 https://obs-nightly.s3.amazonaws.com/osx-deps-2018-08-09.tar.gz
+curl -O https://obs-nightly.s3.amazonaws.com/osx-deps-2018-08-09.tar.gz
 tar -xf ./osx-deps-2018-08-09.tar.gz -C /tmp
 
 git clone https://github.com/obsproject/obs-studio
@@ -84,6 +84,7 @@ cmake .. \
 ### Build obs-transition-matrix plugin
 
 ```
+cd ../../
 git clone https://github.com/admshao/obs-transition-matrix.git
 cd obs-transition-matrix
 mkdir build && cd build
